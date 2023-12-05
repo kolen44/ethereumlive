@@ -1,0 +1,94 @@
+.container{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 100%;
+	transform-style: preserve-3d;
+	.box{
+		position: relative;
+		width: 250px;
+		height: 400px;
+		margin: 40px;
+		background: #232323;
+		border-radius: 20px;
+		transform-style: preserve-3d;
+		.name{
+			position: absolute;
+			top: 0;
+			left: 0;
+			font-size: 24px;
+			text-align: center;
+			color: #fff;
+			width: 100%;
+			transform-style: preserve-3d;
+			transform: translate3d(0, 0px, 75px);
+			transition: .5s;
+			opacity: 0;
+			z-index: 10;
+		}
+		.buy{
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform-style: preserve-3d;
+			transform: translate3d(-50%, 0px, 75px);
+			color: #fff;
+			background: #333;
+			padding: 10px 25px;
+			border-radius: 30px;
+			text-decoration: none;
+			transition: .5s;
+			opacity: 0;
+			z-index: 10;
+		}
+	}
+}
+.box::before{
+	content: 'ETHER';
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	font-size: 6em;
+	font-weight: 900;
+	color: #fff;
+	font-style: italic;
+	opacity: 0;
+	transition: 0.5s;
+}
+
+.box::after{
+	content: 'LIVE';
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	font-size: 6em;
+	font-weight: 900;
+	color: #fff;
+	font-style: italic;
+	opacity: 0;
+	transition: 0.5s;
+}
+.box:hover::after,
+.box:hover::before{
+	opacity: 0.04;
+}
+
+.box:hover .name{
+	top: 40px;
+	opacity: 1;
+}
+
+.box:hover .buy{
+	bottom: 30px;
+	opacity: 1;
+}
+
+.main-text{
+	color: #fff;
+	margin: 80px 0 40px 0px;
+	h1{
+		font-size: 30px;
+	}
+}
