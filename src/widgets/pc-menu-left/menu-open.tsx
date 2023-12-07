@@ -1,9 +1,11 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import ToggleMode from '../toggle-mode/ToggleMode.tsx'
 
 export default function PCMenu({}){
   return (
     <div class='pc-menu'>
+      <ToggleMode />
       <div class='main-pc-menu-left-button'>
         <Image 
           src="/home.png"

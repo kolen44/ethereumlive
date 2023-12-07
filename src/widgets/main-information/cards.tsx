@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import CreateCard from '@/shared/card/card.tsx'
 import './main_info.scss'
 
 export default function MainInformation(){

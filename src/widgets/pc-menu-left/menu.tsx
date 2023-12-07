@@ -1,15 +1,16 @@
+'use client'
+
 import MenuIcon from '@/shared/menu/menu-icon'
 import PCMenu from './menu-open.tsx'
+import 'react'
 
 export default function Menu(){
-  function OpenMenu(){
+  function OpenMenu({Component, pageProps}){
     return (
       PCMenu
     )
   }
 	return(
-    <div class='menu-icon'>
-      <MenuIcon onClick = {OpenMenu()}/>
-    </div>
+    <OpenMenu />
 	)
 }

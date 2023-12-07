@@ -1,4 +1,6 @@
 import HeaderButton from '@/shared/buttons/header-button.tsx'
+import ToggleMode from '@/widgets/toggle-mode/ToggleMode'
+import {Box} from '@chakra-ui/react'
 
 let airdrop = [
   {
@@ -22,8 +24,11 @@ export default function Header(){
         )
       })
 	return(
-    <div class='header-div-menu-for-buttons'>
-      {buttons}
-    </div>
+    <Box justifyContent='space-between' className='header-div-menu-for-buttons'>
+      <Box display='flex'>
+        {buttons}
+      </Box>
+      <ToggleMode />
+    </Box>
 	)
 }
