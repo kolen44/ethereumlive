@@ -11,7 +11,7 @@ export default function RoadmapTimeLine(){
     }
   },[])
   return ( 
-    <Box id='placeBox' maxW={['500px','700px','960px']} >
+    <Box id='placeBox' maxW={['500px','700px','700px']} >
       There will be something
     </Box>
    )

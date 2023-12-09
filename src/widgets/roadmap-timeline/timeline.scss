@@ -1,0 +1,149 @@
+.box-container::after{
+	position: absolute;
+	content: ' ';
+	width: 2px;
+	height: 100%;
+	background-image: linear-gradient(to bottom, rgb(106,6,236),rgb(220,0,240));
+}
+
+.roadmap-timeline-header::after{
+	position: absolute;
+	content: ' ';
+	width: 50%;
+	height: 4px;
+	left: 50%;
+	bottom: -5px;
+	background-image: linear-gradient(to right, rgb(106,6,236),rgb(220,0,240));
+	transform:translateX(-50%);
+}
+
+.roadmap-timeline-list-item{
+		width: 50%;
+		height: auto;
+		padding: 15px 20px;
+		background-color: #fff;
+		box-shadow: 1px 1px 25px rgba(0,0,0,0.384);
+		border-radius: 10px;
+		margin-bottom: 30px;
+		z-index: 10;
+		position: relative;
+}
+
+.roadmap-timeline-list-item:nth-child(odd){
+	float: left;
+	clear: right;
+	transform: translateX(-30px);
+	text-align: right;
+}
+
+.roadmap-timeline-list-item:nth-child(odd) .roadmap-timeline-span-date{
+	right: 20px;
+}
+
+.roadmap-timeline-list-item:nth-child(even){
+	float: right;
+	clear: left;
+	transform: translateX(30px);
+}
+.roadmap-timeline-list-item:nth-child(4){
+	margin-bottom: 0;
+}
+
+.roadmap-timeline-list-item h2{
+	font-size: 20px;
+	font-weight: 500;
+	color: rgb(106,6,236);
+}
+
+.roadmap-timeline-list-item p{
+	font-size: 15px;
+	color: #444;
+	margin: 7px 0;
+	line-height: 23px;
+}
+
+.roadmap-timeline-list-item a{
+	font-size: 15px;
+	color: rgb(106,6,236);
+	text-decoration: none;
+}
+
+.roadmap-timeline-span-date{
+	position: absolute;
+	top: -40px;
+	width: 135px;
+	height: 35px;
+	border-radius: 20px;
+	color: #fff;
+	background-image: linear-gradient(to right, rgb(106,6,236),rgb(220,0,240));
+	display: grid;
+	place-items: center;
+	font-size: 14px;
+}
+
+.roadmap-timeline-span-circle{
+	width: 30px;
+	height: 30px;
+	background-color: rgba(220,0,240,0.403);
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+}
+
+.roadmap-timeline-span-circle::after{
+	content: ' ';
+	width: 15px;
+	height: 15px;
+	background-color: rgb(106,6,236);
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.roadmap-timeline-list-item:nth-child(odd) .roadmap-timeline-span-circle{
+	right: -30px;
+	transform: translate(50%,-50%);
+}
+
+.roadmap-timeline-list-item:nth-child(even) .roadmap-timeline-span-circle{
+	left: -30px;
+	transform: translate(-50%,-50%);
+}
+
+@media screen and (max-width: 1224px){
+	.box-container{
+		width: 85%;
+	}
+}
+
+@media screen and (max-width: 993px){
+	.box-container{
+		width: 80%;
+		transform: translateX(15px);
+	}
+	.box-container::after{
+		left: -30px;
+	}
+	.roadmap-timeline-list-item{
+		width: 100%;
+		float: none;
+		clear: none;
+		margin-bottom: 80px;
+	}
+	.roadmap-timeline-list-item:nth-child(odd){
+		transform: translateX(0);
+		text-align: left;
+	}
+	.roadmap-timeline-list-item:nth-child(odd) .roadmap-timeline-span-date{
+		left: 20px;
+	}
+	.roadmap-timeline-list-item:nth-child(odd) .roadmap-timeline-span-circle{
+		left: -30px;
+		transform: translate(-50%,-50%);
+	}
+	.roadmap-timeline-list-item:nth-child(even){
+		transform: translateX(0);
+	}
+}
