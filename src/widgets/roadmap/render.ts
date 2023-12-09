@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import React, { useEffect } from "react";
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
@@ -12,7 +13,7 @@ export function create3DModel(){
     element.appendChild( renderer.domElement );
     const light = new THREE.AmbientLight( 0xffffff ); // soft white light
     scene.add( light );
-    renderer.setClearColor(0xEEEEEE);
+    renderer.setClearColor('#141214');
     const loader = new GLTFLoader();
     const controls = new OrbitControls( camera, renderer.domElement );
     controls.update();
@@ -23,7 +24,7 @@ export function create3DModel(){
         scene.add( model );
 
         function animate() {
-        requestAnimationFrame( animate );
+            requestAnimationFrame( animate );
 
             // required if controls.enableDamping or controls.autoRotate are set to true
             //controls.update();
@@ -35,7 +36,5 @@ export function create3DModel(){
     }, undefined, function ( error ) {
 
         console.error( error );
-
     } );
-      
 } 
