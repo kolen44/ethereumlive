@@ -4,6 +4,7 @@ import MenuOpen from '@/widgets/pc-menu-left/menu.tsx'
 import Cards from '@/widgets/main-information/cards.tsx'
 import MainText from '@/widgets/main-information/main_text.tsx'
 import {ChakraProvider } from '@chakra-ui/react'
+import RoadmapTimeLine from '@/widgets/roadmap/roadmap.tsx'
 import theme from './theme.tsx'
 import '@/styles/header/header.scss'
 
@@ -16,6 +17,7 @@ export default function MainPage(){
           <Header />
           <MainText />
           <Cards />
+          <RoadmapTimeLine />
         </main>
       </div>
     </ChakraProvider>
