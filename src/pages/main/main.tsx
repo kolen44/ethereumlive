@@ -5,21 +5,21 @@ import CreateTimeline from '@/widgets/roadmap-timeline/timeline.tsx'
 import Cards from '@/widgets/main-information/cards.tsx'
 import MainText from '@/widgets/main-information/main_text.tsx'
 import {ChakraProvider } from '@chakra-ui/react'
-import RoadmapTimeLine from '@/widgets/roadmap/roadmap.tsx'
+import CreateCastle3D from '@/widgets/3d-model-castle/castle-3d.tsx'
 import theme from './theme.tsx'
 import Fonts from './fonts'
-import '@/styles/header/header.scss'
+import '@/styles/main-page/main.scss'
 
 export default function MainPage(){
 	return(
     <ChakraProvider theme={theme}>
-      <div class='header'>
+      <div class='main-page'>
         <MenuOpen />
         <main>
           <Header />
           <MainText />
           <Cards />
-          <RoadmapTimeLine />
+          <CreateCastle3D />
           <CreateTimeline />
         </main>
       </div>

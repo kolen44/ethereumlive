@@ -1,17 +1,20 @@
 import React, { useEffect,  useRef } from "react";
 import {Box} from '@chakra-ui/react'
-import {create3DModel} from './render.ts'
+import {create3DModel} from './render-castle.ts'
 
-export default function RoadmapTimeLine(){
+export default function CreateCastle3D(){
   const shouldRender: boolean = useRef(true)
   useEffect(()=>{
     if(shouldRender.current ){
       shouldRender.current = false
-      create3DModel()
+      if(window.innerWidth>1000){
+        create3DModel()
+      }
+      
     }
   },[])
   return ( 
-    <Box id='placeBox' maxW={['500px','700px','700px']} >
+    <Box id='placeBox'  pos="absolute" >
       There will be something
     </Box>
    )

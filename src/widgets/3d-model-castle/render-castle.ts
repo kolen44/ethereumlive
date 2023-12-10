@@ -28,10 +28,9 @@ export function create3DModel(){
             requestAnimationFrame( animate );
             if(window.innerWidth<=776){
                     model.scale.set( 0.05, 0.05, 0.05 );
-                    renderer.setSize( window.innerWidth/1.25, window.innerHeight/2 );
+                    renderer.setSize( window.innerWidth - 200, window.innerHeight );
                 }else{
                     model.scale.set( 0.1, 0.1, 0.1 );
-                    renderer.setSize( window.innerWidth, window.innerHeight );
                 }
             // required if controls.enableDamping or controls.autoRotate are set to true
             //controls.update();

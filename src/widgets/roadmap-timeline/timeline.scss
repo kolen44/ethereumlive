@@ -27,6 +27,43 @@
 		margin-bottom: 30px;
 		z-index: 10;
 		position: relative;
+		a{
+			font-size: 1.3rem;
+			color: rgb(106,6,236);
+			text-decoration: none;
+		}
+		p{
+			font-size: 1.9rem;
+			font-weight: 500;
+			color: #444;
+			margin: 7px 0;
+			line-height: 1.9rem;
+		}
+		h2{
+			font-size: 2rem;
+			font-weight: 500;
+			color: rgb(106,6,236);
+		}
+		.roadmap-timeline-span-date{
+			position: absolute;
+			top: -40px;
+			width: 135px;
+			height: 35px;
+			border-radius: 20px;
+			color: #fff;
+			background-image: linear-gradient(to right, rgb(106,6,236),rgb(220,0,240));
+			display: grid;
+			place-items: center;
+			font-size: 1.5rem;
+		}
+		.roadmap-timeline-span-circle{
+			width: 30px;
+			height: 30px;
+			background-color: rgba(220,0,240,0.403);
+			border-radius: 50%;
+			position: absolute;
+			top: 0;
+		}
 }
 
 .roadmap-timeline-list-item:nth-child(odd){
@@ -47,47 +84,6 @@
 }
 .roadmap-timeline-list-item:nth-child(4){
 	margin-bottom: 0;
-}
-
-.roadmap-timeline-list-item h2{
-	font-size: 20px;
-	font-weight: 500;
-	color: rgb(106,6,236);
-}
-
-.roadmap-timeline-list-item p{
-	font-size: 15px;
-	color: #444;
-	margin: 7px 0;
-	line-height: 23px;
-}
-
-.roadmap-timeline-list-item a{
-	font-size: 15px;
-	color: rgb(106,6,236);
-	text-decoration: none;
-}
-
-.roadmap-timeline-span-date{
-	position: absolute;
-	top: -40px;
-	width: 135px;
-	height: 35px;
-	border-radius: 20px;
-	color: #fff;
-	background-image: linear-gradient(to right, rgb(106,6,236),rgb(220,0,240));
-	display: grid;
-	place-items: center;
-	font-size: 14px;
-}
-
-.roadmap-timeline-span-circle{
-	width: 30px;
-	height: 30px;
-	background-color: rgba(220,0,240,0.403);
-	border-radius: 50%;
-	position: absolute;
-	top: 0;
 }
 
 .roadmap-timeline-span-circle::after{
